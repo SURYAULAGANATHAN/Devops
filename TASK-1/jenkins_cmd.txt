@@ -1,0 +1,31 @@
+root@ubuntu:/var/lib/jenkins/secrets# history
+    1  wget -q -O - https://pkg.jenkins.io/jenkins.io.key | sudo tee /usr/share/keyrings/jenkins.asc
+    2  echo "deb [signed-by=/usr/share/keyrings/jenkins.asc] https://pkg.jenkins.io/debian/ stable main" | sudo tee /etc/apt/sources.list.d/jenkins.list
+    3  sudo apt update
+    4  sudo apt install jenkins
+    5  sudo wget -O /usr/share/keyrings/jenkins-keyring.asc   https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+    6  echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]"   https://pkg.jenkins.io/debian-stable binary/ | sudo tee   /etc/apt/sources.list.d/jenkins.list > /dev/null
+    7  sudo apt-get update
+    8  sudo apt-get install jenkins
+    9  sudo systemctl enable jenkins
+   10  sudo systemctl start jenkins
+   11  sudo systemctl restart jenkins
+   12  sudo apt update
+   13  sudo apt install openjdk-17-jdk
+   14  sudo update-alternatives --config java
+   15  java -version
+   16  sudo systemctl restart jenkins
+   17  sudo nano /etc/default/jenkins
+   18  sudo systemctl restart jenkins
+   19  sudo systemctl start jenkins
+   20  sudo systemctl enable jenkins
+   21  cd ..
+   22  cd var
+   23  cd ..
+   24  cd var
+   25  cd lib
+   26  cd jenkins
+   27  cd secrets
+   28  cat initialAdminPassword
+   29  sudo visudo
+   30  history
